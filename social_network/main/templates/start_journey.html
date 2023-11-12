@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Начало пути</title>
+  <style>
+    * {
+        margin: 0;
+        padding: 0;
+    }
+    body {
+      background-image: url("https://cdn.pixabay.com/photo/2016/11/29/04/17/bonfire-1867275_1280.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      overflow: hidden;
+    }
+
+    .container {
+        font-size: 85px;
+        color: white;
+        position: relative;
+        bottom: 40rem;
+        left: 10rem;
+        opacity: 0.5;
+    }
+
+    .transparent-box {
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      position: relative;
+      bottom: 40rem;
+      right: 25rem;
+  }
+  
+  .button {
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 5px;
+      margin: 5px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+      background-color: gray;
+  }
+  
+  .button:hover {
+      background-color:blanchedalmond; /* Цвет кнопок при наведении курсора */
+  }
+
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  </style>
+</head>
+<body>
+  <img src="https://cdn.pixabay.com/photo/2016/11/29/04/17/bonfire-1867275_1280.jpg" alt="Фон" style="opacity:0">
+  
+  <h1 class="container">Welcome Back !</h1>
+
+  <div class="transparent-box">
+    <button class="button"><a href="{% url 'login-page' %}">Логин</a></button>
+    <button class="button"><a href="{% url 'registration-page' %}">Регистрация</a></button>
+  </div>
+</body>
+</html>
